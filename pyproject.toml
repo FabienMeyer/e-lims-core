@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "e_lims_core"
-version = "0.0.1"
+version = "0.0.2"
 description = "e-lims core"
 readme = "README.md"
 authors = ["Fabien Meyer <fabien-meyer@outlook.com>"]
@@ -84,7 +84,7 @@ indent-style = 'space'
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.0.1"
+version = "0.0.2"
 version_scheme = "semver2"
 version_provider = "poetry"
 version_files = [
