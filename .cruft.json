@@ -1,0 +1,22 @@
+{
+  "template": "https://github.com/FabienMeyer/e-lims-cruft.git",
+  "commit": "d0bf0f27ae545eda1e9b2d994e549ee2955f37ef",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Fabien Meyer",
+      "email": "fabien-meyer@outlook.com",
+      "project_name": "e-lims-core",
+      "project_slug": "e_lims_core",
+      "project_short_description": "e-lims core",
+      "project_git_repository": "FabienMeyer/e-lims-core",
+      "sonarcloud": "FabienMeyer_e-lims-core",
+      "version": "0.0.1",
+      "_copy_without_render": [
+        ".github/*"
+      ],
+      "_template": "https://github.com/FabienMeyer/e-lims-cruft.git"
+    }
+  },
+  "directory": null
+}
