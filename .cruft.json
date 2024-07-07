@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/FabienMeyer/e-lims-cruft.git",
-  "commit": "9ed6b38e0cd46c13c91a02b41877bca3cb32fdd5",
+  "commit": "e680417e9b0e9977e5ffa9c30bfbcb5c6b18ba9d",
   "checkout": null,
   "context": {
     "cookiecutter": {

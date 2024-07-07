@@ -1,3 +1,4 @@
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/e-lims-core)
 ![CI](https://github.com/FabienMeyer/e-lims-core/actions/workflows/ci.yml/badge.svg)
 ![Codecov](https://img.shields.io/codecov/c/github/FabienMeyer/e-lims-core)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=FabienMeyer_e-lims-core&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=FabienMeyer_e-lims-core)
@@ -10,8 +11,8 @@ A brief description of what e-lims-core does.
 
 # Installation
 
-## Install Python 3.11 or 3.12
-If you haven’t installed Python 3.11 or 3.12 yet, you can download it from the [official Python website](https://www.python.org/downloads/).
+## Install Python 3.12
+If you haven’t installed Python 3.12 yet, you can download it from the [official Python website](https://www.python.org/downloads/).
 
 ## Install Poetry
 If you haven’t installed Poetry yet, you can do so by following the [official Poetry installation guide](https://python-poetry.org/docs/#installation).
