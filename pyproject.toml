@@ -84,10 +84,17 @@ indent-style = 'space'
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-tag_format = "v$version"
+version = "0.0.1"
 version_scheme = "semver2"
 version_provider = "poetry"
+version_files = [
+    "e_lims_core/__init__.py:__version__",
+    "pyproject.toml:version"
+]
+bump_message = "bump: version $current_version → $new_version"
 update_changelog_on_bump = true
+tag_format = "v$version"
+annotated_tag = true
 major_version_zero = true
 
 [build-system]
