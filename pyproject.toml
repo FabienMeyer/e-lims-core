@@ -11,6 +11,8 @@ include = ["e_lims_core/py.typed"]
 python = '^3.12'
 typing-extensions = '^4.12.2'
 
+loguru = "^0.7.2"
+
 [tool.poetry.group.dev.dependencies]
 cookiecutter = '^2.6.0'
 commitizen = "^3.27.0"
