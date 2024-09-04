@@ -20,13 +20,24 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+  features:
+    - navigation.tabs
+
 
 nav: # Setting up the navigation. Te below list will be tabs on left panel
-  - Home: index.md
-  - Changelog: changelog.md
-  - Contributing: contributing.md
-  - Code of Conduct: code_of_conduct.md
-  - License: license.md
+  - E-LIMS-CORE:
+    - Overview: index.md
+    - Changelog: changelog.md
+    - Contributing: contributing.md
+    - Code of Conduct: code_of_conduct.md
+    - License: license.md
+
+  - Electronic components:
+    - Overview: electronic_components/overview.md
+    - Analog to digital converter: electronic_components/adc/adc.md
+    - Digital to analog converter: electronic_components/dac/dac.md
+
+
 
 markdown_extensions:
   - pymdownx.snippets:
@@ -37,6 +48,8 @@ markdown_extensions:
       pygments_lang_class: true
 plugins:
   - privacy
+  - search:
+      enabled: false
 
 extra:
   consent:
