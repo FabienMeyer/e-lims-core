@@ -21,8 +21,18 @@ theme:
         icon: material/brightness-4
         name: Switch to light mode
 
+extra_css:
+  - css/extra.css 
+
 nav: # Setting up the navigation. Te below list will be tabs on left panel
   - Home: index.md
+  - Code: 
+    - Utils:
+      - DUT:
+        - Device: e_lims_core/utils/dut/device.md
+      - Files:
+        - FileProps: e_lims_core/utils/files/file_props.md
+        - Timestamp: e_lims_core/utils/files/timestamp.md
   - Changelog: changelog.md
   - Contributing: contributing.md
   - Code of Conduct: code_of_conduct.md
@@ -31,11 +41,35 @@ nav: # Setting up the navigation. Te below list will be tabs on left panel
 markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
 plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ['e_lims_core']
+          options:
+            docstring_style: google
+            members_order: source
+            show_category_heading: false
+            show_symbol_type_heading: true
+            docstring_options:
+              ignore_init_summary: false
+              trim_doctest_flags: true
+              ignore_init_summary: false
+            docstring_section_style: spacy
+            merge_init_into_class: false
+            show_if_no_docstring: false
+            show_docstring_attributes: true
+            show_docstring_functions: true
+            show_docstring_classes: true
+            show_docstring_module: true
+            show_docstring_decriptions: true
+            show_docstring_examples: true
+            show_docstring_other_parameters: true
+            show_docstring_raises: true
+            show_docstring_recieves: true
+            show_docstring_returns: false
+            show_docstring_warns: true
+            show_docstring_yields: true
   - privacy
 
 extra:
