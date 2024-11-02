@@ -30,6 +30,8 @@ nav: # Setting up the navigation. Te below list will be tabs on left panel
     - Utils:
       - DUT:
         - Device: e_lims_core/utils/dut/device.md
+        - Tray: e_lims_core/utils/dut/tray.md
+        - Trays: e_lims_core/utils/dut/trays.md
       - Files:
         - FileProps: e_lims_core/utils/files/file_props.md
         - Timestamp: e_lims_core/utils/files/timestamp.md
