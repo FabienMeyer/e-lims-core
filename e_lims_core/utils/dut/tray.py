@@ -198,13 +198,15 @@ class Tray:
             ValueError: If the device name is not unique.
 
         """
-        issues = []
-        for check_index, check_device in enumerate(self.devices):
-            for index, device in enumerate(self.devices):
-                if index != check_index and check_device.name == device.name:
-                    issues.append(check_device)
-        if issues:
-            msg = f'Multiple identical name found ({", ".join([device.name for device in issues])}).'
+        seen_names = set()
+        duplicate_names = set()
+        for device in self.devices:
+            if device.name in seen_names:
+                duplicate_names.add(device.name)
+            else:
+                seen_names.add(device.name)
+        if duplicate_names:
+            msg = f'Multiple identical name found ({", ".join(duplicate_names)}).'
             raise ValueError(msg)
 
     def check_device_product(self) -> None:
@@ -215,13 +217,9 @@ class Tray:
             ValueError: If the device product are not the same.
 
         """
-        issues = []
-        for check_index, check_device in enumerate(self.devices):
-            for index, device in enumerate(self.devices):
-                if index != check_index and check_device.product != device.product and device.product != self.product:
-                    issues.append(check_device)
-        if issues:
-            msg = f'Multiple differential product found ({", ".join([device.name for device in issues])}).'
+        unique_products = {device.product for device in self.devices}
+        if len(unique_products) > 1:
+            msg = f'Multiple differential product found ({", ".join(unique_products)}).'
             raise ValueError(msg)
 
     def check_device_position(self) -> None:
@@ -232,13 +230,36 @@ class Tray:
             ValueError: If the device position is not unique.
 
         """
+        seen_positions = set()
+        duplicate_positions = set()
+        for device in self.devices:
+            if device.position in seen_positions:
+                duplicate_positions.add(device.position)
+            else:
+                seen_positions.add(device.position)
+        if duplicate_positions:
+            names = {', '.join([device.name for device in self.devices if device.position in duplicate_positions])}
+            msg = f'Multiple identical position found ({names}).'
+            raise ValueError(msg)
+
+    def check_device_position_in_tray(self) -> None:
+        """Check device position in tray.
+
+        Raises
+        ------
+            ValueError: If the device position is out of tray.
+
+        """
         issues = []
-        for check_index, check_device in enumerate(self.devices):
-            for index, device in enumerate(self.devices):
-                if index != check_index and check_device.position == device.position:
-                    issues.append(check_device)
+        for device in self.devices:
+            if device.position.column >= self.max_column or device.position.row >= self.max_row:
+                issues = [
+                    device
+                    for device in self.devices
+                    if device.position.column >= self.max_column or device.position.row >= self.max_row
+                ]
         if issues:
-            msg = f'Multiple identical position found ({", ".join([device.name for device in self.devices])}).'
+            msg = f'Device out of tray found ({", ".join([device.name for device in issues])}).'
             raise ValueError(msg)
 
     def get_devices(self) -> pd.DataFrame:

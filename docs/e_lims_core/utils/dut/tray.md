@@ -1,3 +1,0 @@
-# Tray
-
-::: utils.dut.tray

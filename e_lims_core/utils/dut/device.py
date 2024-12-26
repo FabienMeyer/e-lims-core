@@ -40,6 +40,16 @@ class Position:
     column: int
     row: int
 
+    def __hash__(self) -> int:
+        """Return the hash of the position."""
+        return hash((self.row, self.column))
+
+    def __eq__(self, other: object) -> bool:
+        """Check if the position is equal to another position."""
+        if isinstance(other, Position):
+            return self.row == other.row and self.column == other.column
+        return False
+
 
 class Device:
     """Represents a device under test (dut).

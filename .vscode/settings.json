@@ -1,5 +1,4 @@
 {
-    "iis.configDir": "",
     "python.testing.pytestArgs": [
         "tests"
     ],
