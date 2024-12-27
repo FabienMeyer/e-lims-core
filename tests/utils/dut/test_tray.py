@@ -201,7 +201,7 @@ def test_get_devices(fx_tray: Tray) -> None:
     assert len(devices) == len(fx_tray.devices)
 
 
-@pytest.mark.skip(reason="Test is working in debug mode but not in run mode")
+@pytest.mark.skip(reason='Test is working in debug mode but not in run mode')
 def test_get_tray(fx_tray: Tray) -> None:
     """Test the get_tray method of the Tray class."""
     tray_df = fx_tray.get_tray()

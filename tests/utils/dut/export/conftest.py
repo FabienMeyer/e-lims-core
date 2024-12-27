@@ -5,6 +5,7 @@ from __future__ import annotations
 import pathlib
 
 import pytest
+from openpyxl import Workbook
 
 from e_lims_core.utils.dut.device import Corner, Device, Position
 from e_lims_core.utils.dut.tray import Tray
@@ -87,3 +88,15 @@ def fx_tray(fx_devices: list[Device]) -> Tray:
         max_column=1,
         max_row=2,
     )
+
+
+@pytest.fixture()
+def fx_workbook() -> Workbook:
+    """Fixture for creating a workbook object.
+
+    Returns
+    -------
+        Workbook: Workbook object.
+
+    """
+    return Workbook()
