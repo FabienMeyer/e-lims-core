@@ -32,6 +32,7 @@ nav: # Setting up the navigation. Te below list will be tabs on left panel
         - Trays: e_lims_core/utils/dut/trays.md
         - Device: e_lims_core/utils/dut/device.md
         - Export: e_lims_core/utils/dut/export.md
+        - Example: e_lims_core/utils/dut/example.md
       - Files:
         - FileProps: e_lims_core/utils/files/file_props.md
         - Timestamp: e_lims_core/utils/files/timestamp.md
@@ -41,6 +42,12 @@ nav: # Setting up the navigation. Te below list will be tabs on left panel
   - License: license.md
 
 markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
   - pymdownx.snippets:
       check_paths: true
 plugins:
