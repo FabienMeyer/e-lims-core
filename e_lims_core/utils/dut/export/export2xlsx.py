@@ -1,4 +1,5 @@
 """Device under test export to excel module."""
+
 from __future__ import annotations
 
 from openpyxl import Workbook

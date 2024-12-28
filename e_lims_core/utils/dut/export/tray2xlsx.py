@@ -147,7 +147,7 @@ class Tray2Excel:
             row (int): The row index.
             col (int): The column index.
 
-        Returns
+        Returns:
         -------
             tuple[Font, Alignment, Border]: The row format.
 
@@ -185,7 +185,7 @@ class Tray2Excel:
         row (int): The row index.
         col (int): The column index.
 
-        Returns
+        Returns:
         -------
             tuple[Font, Alignment, Border]: The data format.
 

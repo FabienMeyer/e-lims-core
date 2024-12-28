@@ -1,4 +1,5 @@
 """Module used to represent a trays of devices under test (DUT)."""
+
 from __future__ import annotations
 
 from e_lims_core.utils.dut.export.export2csv import Export2Csv

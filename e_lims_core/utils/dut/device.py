@@ -1,4 +1,5 @@
 """Module used to represent a device under test (DUT)."""
+
 from __future__ import annotations
 
 import re
@@ -56,7 +57,7 @@ class Position:
         ----
             other (object): The object to compare with.
 
-        Returns
+        Returns:
         -------
             bool: True if the positions are equal, False otherwise.
 
