@@ -1,5 +1,4 @@
 """Module used to represent the properties of a file."""
-
 from __future__ import annotations
 
 import re

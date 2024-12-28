@@ -1,5 +1,4 @@
 """Module used to represent a device under test (DUT)."""
-
 from __future__ import annotations
 
 import re
@@ -8,7 +7,7 @@ from enum import Enum
 
 
 class Corner(Enum):
-    """Represents the device under test corner types.
+    """Corner class representing the corner type of a device under test.
 
     Enum values:
         * SS: Corner type SS
@@ -41,11 +40,27 @@ class Position:
     row: int
 
     def __hash__(self) -> int:
-        """Return the hash of the position."""
+        """Return the hash of the position.
+
+        Returns
+        -------
+            int: The hash of the position.
+
+        """
         return hash((self.row, self.column))
 
     def __eq__(self, other: object) -> bool:
-        """Check if the position is equal to another position."""
+        """Check if the position is equal to another position.
+
+        Args:
+        ----
+            other (object): The object to compare with.
+
+        Returns
+        -------
+            bool: True if the positions are equal, False otherwise.
+
+        """
         if isinstance(other, Position):
             return self.row == other.row and self.column == other.column
         return False

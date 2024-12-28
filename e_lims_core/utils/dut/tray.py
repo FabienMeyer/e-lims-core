@@ -1,5 +1,4 @@
 """Module used to represent a tray of devices under test (DUT)."""
-
 from __future__ import annotations
 
 import re

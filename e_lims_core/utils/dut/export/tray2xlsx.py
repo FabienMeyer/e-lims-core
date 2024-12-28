@@ -51,7 +51,13 @@ class Tray2Excel:
         self.worksheet = self.creat_and_active_worksheet()
 
     def generate(self) -> Workbook:
-        """Export the tray to an Excel file."""
+        """Export the tray to an Excel file.
+
+        Returns
+        -------
+            Workbook: The Excel workbook.
+
+        """
         self.create_and_format_title()
         self.create_and_format_columns()
         self.create_and_format_rows()
@@ -59,12 +65,24 @@ class Tray2Excel:
         return self.workbook
 
     def creat_and_active_worksheet(self) -> Worksheet:
-        """Create a worksheet for the tray."""
+        """Create a worksheet for the tray.
+
+        Returns
+        -------
+            Worksheet: The worksheet for the tray.
+
+        """
         self.workbook.create_sheet(title=self.tray.name)
         return self.workbook[self.tray.name]
 
     def get_title_format(self) -> tuple[Font, Alignment, Border]:
-        """Get the title format for the tray."""
+        """Get the title format for the tray.
+
+        Returns
+        -------
+            tuple[Font, Alignment, Border]: The title format.
+
+        """
         font = Font(bold=True, color='00FF0000', size=20)
         alignment = Alignment(horizontal='center', vertical='center')
         return font, alignment, HEADER
@@ -91,8 +109,8 @@ class Tray2Excel:
 
         Args:
         ----
-        columns (int): The number of columns in the tray.
-        col (int): The column index.
+            columns (int): The number of columns in the tray.
+            col (int): The column index.
 
         """
         font = Font(bold=True, color='00000000', size=10)
@@ -124,10 +142,14 @@ class Tray2Excel:
 
         Args:
         ----
-        rows (int): The number of rows in the tray.
-        columns (int): The number of columns in the tray.
-        row (int): The row index.
-        col (int): The column index.
+            rows (int): The number of rows in the tray.
+            columns (int): The number of columns in the tray.
+            row (int): The row index.
+            col (int): The column index.
+
+        Returns
+        -------
+            tuple[Font, Alignment, Border]: The row format.
 
         """
         font = Font(bold=True, color='00000000', size=10)
@@ -162,6 +184,10 @@ class Tray2Excel:
         columns (int): The number of columns in the tray.
         row (int): The row index.
         col (int): The column index.
+
+        Returns
+        -------
+            tuple[Font, Alignment, Border]: The data format.
 
         """
         font = Font(bold=False, color='00000000', size=10)

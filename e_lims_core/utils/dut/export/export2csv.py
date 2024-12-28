@@ -1,5 +1,4 @@
-"""Device under test export module."""
-
+"""Device under test export to csv module."""
 from __future__ import annotations
 
 from typing import TYPE_CHECKING

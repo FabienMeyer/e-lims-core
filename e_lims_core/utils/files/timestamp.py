@@ -1,5 +1,4 @@
-"""Timestamp."""
-
+"""Module used to represent a timestamp with date and time components extracted from a datetime object."""
 from __future__ import annotations
 
 from datetime import datetime
