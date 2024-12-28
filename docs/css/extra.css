@@ -1,0 +1,15 @@
+a[href*="--returns"] {
+    display: none;
+}
+
+a[href*="--raises"] {
+    display: none;
+}
+
+a[href*="__init__"] {
+    display: none;
+}
+
+a[href*="__repr__"] {
+    display: none;
+}
