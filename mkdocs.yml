@@ -3,7 +3,7 @@ site_url: https://fabienmeyer.github.io//e-lims-core
 site_description: Cookiecutter template for e-lims projects
 site_author: Fabien Meyer
 site_dir: build
-watch: [mkdocs.yml, docs, CHANGELOG.md, CODE_OF_CONDUCT.md, CONTRIBUTING.md, LICENSE, README.md]
+watch: [mkdocs.yml, docs, CHANGELOG.md, CODE_OF_CONDUCT.md, CONTRIBUTING.md, LICENSE, README.md, constraints.md, goal.md]
 
 theme:
   name: material
@@ -36,6 +36,7 @@ nav: # Setting up the navigation. Te below list will be tabs on left panel
       - Files:
         - FileProps: e_lims_core/utils/files/file_props.md
         - Timestamp: e_lims_core/utils/files/timestamp.md
+      - Logger: e_lims_core/utils/logger/logger.md
   - Changelog: changelog.md
   - Contributing: contributing.md
   - Code of Conduct: code_of_conduct.md

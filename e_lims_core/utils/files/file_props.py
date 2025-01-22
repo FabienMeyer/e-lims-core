@@ -14,6 +14,7 @@ class FileSuffix(Enum):
 
     CSV = '.csv'
     XLSX = '.xlsx'
+    LOG = '.log'
 
 
 class FileProps:
