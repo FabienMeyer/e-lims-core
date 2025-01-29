@@ -4,7 +4,7 @@ import re
 
 import pytest
 
-from e_lims_core.utils.dut.device import Corner, Device
+from e_lims_core.utils.dut.device import Corner, Device, Position
 
 
 def test_device_initialization(fx_device: Device) -> None:
@@ -15,7 +15,7 @@ def test_device_initialization(fx_device: Device) -> None:
     assert fx_device.package == 'R0'
     assert fx_device.serial == 'SN123456'
     assert fx_device.corner == Corner.SS
-    assert fx_device.position == fx_device.position
+    assert fx_device.position == Position(column=1, row=2)
     assert fx_device.name == 'SS1'
 
 
